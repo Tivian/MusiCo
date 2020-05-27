@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_album_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <eu.tivian.musico.ui.SquareImageView
+        android:id="@+id/siv_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/tab_stats"
+        card_view:srcCompat="@drawable/album" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/siv_album">
+
+        <TextView
+            android:id="@+id/et_album_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="marquee"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="19dp"
+            tools:layout_conversion_absoluteWidth="59dp"
+            tools:text="Muse" />
+
+        <TextView
+            android:id="@+id/et_album_artist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:ellipsize="marquee"
+            android:fontFamily="sans-serif-medium"
+            android:singleLine="true"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/et_album_title"
+            tools:text="The 2nd Law" />
+
+        <TextView
+            android:id="@+id/et_album_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="3dp"
+            android:ellipsize="marquee"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/et_album_price"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/et_album_artist"
+            tools:text="2020-05-10" />
+
+        <TextView
+            android:id="@+id/et_album_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:singleLine="true"
+            android:textAlignment="viewEnd"
+            android:textSize="12sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toStartOf="@+id/et_album_currency"
+            card_view:layout_constraintStart_toEndOf="@+id/et_album_date"
+            card_view:layout_constraintTop_toBottomOf="@+id/et_album_artist"
+            tools:text="39.99" />
+
+        <TextView
+            android:id="@+id/et_album_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:singleLine="true"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/et_album_price"
+            card_view:layout_constraintTop_toBottomOf="@+id/et_album_artist"
+            tools:text="PLN" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

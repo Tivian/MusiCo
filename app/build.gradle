@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "eu.tivian.musico"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 23010528
+        versionName "1.5.28"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.core:core:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.fragment:fragment:1.2.4'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation('com.journeyapps:zxing-android-embedded:4.1.0') { transitive = false }
+    implementation 'com.google.zxing:core:3.3.3' // barcode library
+    implementation 'com.basgeekball:awesome-validation:4.2' // TextView validator
+    implementation 'com.simplecityapps:recyclerview-fastscroll:2.0.1' // fast scroller for RecyclerView
+    implementation 'com.github.bumptech.glide:glide:4.11.0' // image loading library
+}

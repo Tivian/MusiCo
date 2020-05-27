@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>Angielski</item>
+        <item>Polski</item>
+    </string-array>
+
+    <string name="app_name">MusiCo</string>
+    <string name="lastfm_user_icon">Ikona użytkownika LastFM</string>
+    <string name="user_since">Od %s</string>
+    <string name="user_played">Odtworzył(a) %d utworów</string>
+    <string name="album_cover">Okładka albumu</string>
+    <string name="album_artist">Wykonawca</string>
+    <string name="album_title">Tytuł</string>
+    <string name="album_year">Rok wydania</string>
+    <string name="album_genre">Gatunek</string>
+    <string name="album_store">Sklep zakupu</string>
+    <string name="album_price">Cena</string>
+    <string name="album_date">Data zakupu</string>
+    <string name="album_parse">Paruj</string>
+    <string name="album_okay">Dodaj album</string>
+    <string name="track_id">%d.</string>
+    <string name="edit_album">Edytuj album</string>
+    <string name="add_album">Dodaj album</string>
+    <string name="text_album">Album</string>
+    <string name="tab_albums">Albumy</string>
+    <string name="tab_lastfm">Last.fm</string>
+    <string name="tab_stats">Statystyki</string>
+    <string name="scan_cancel">Anulowano</string>
+    <string name="scan_error">Nie znaleziono albumu</string>
+    <string name="album_currency">Waluta</string>
+    <string name="menu_edit">Edytuj album</string>
+    <string name="menu_delete">Usuń album</string>
+    <string name="menu_sort_title">Sortuj po</string>
+    <string name="sort_album">Tytule albumu</string>
+    <string name="sort_artist">Artyście</string>
+    <string name="sort_year">Roku wydania</string>
+    <string name="sort_date">Dacie zakupu</string>
+    <string name="sort_price">Cenie</string>
+    <string name="text_clear">Wyczyść</string>
+    <string name="error_empty">Pole nie może być puste</string>
+    <string name="error_year_range">Rok musi być w zakresie [1900; %4d]</string>
+    <string name="dialog_cancel">Anuluj</string>
+    <string name="dialog_deletion_ok">Usuń</string>
+    <string name="dialog_deletion_msg">Czy na pewno chcesz usunąć album \"%s\"?</string>
+    <string name="view_album">Podgląd albumu</string>
+    <string name="button_settings">Ustawienia</string>
+    <string name="label_top_artists">Najczęściej słuchani artyści</string>
+    <string name="error_currency">Nieznana waluta</string>
+    <string name="label_lastfm_username">Nazwa użytkownika Last.fm</string>
+    <string name="label_language">Wybierz język</string>
+    <string name="dialog_save">Zapisz</string>
+    <string name="title_settings">Ustawienia</string>
+    <string name="lang_change">Zmień język</string>
+    <string name="label_recent_tracks">Ostatnio odtwarzane</string>
+    <string name="msg_album_add">Dodano album</string>
+    <string name="msg_album_delete">Usunięto album</string>
+    <string name="msg_album_edit">Zmiany zostały zapisane</string>
+    <string name="error_generic">Wystąpił błąd</string>
+    <string name="now_playing">Odtwarzane teraz…</string>
+    <string name="artist_played">%d odtworzeń</string>
+    <string name="button_refresh">Odśwież</string>
+    <string name="msg_refresh">Odświeżono</string>
+    <string name="stat_album_count">Wszystkich albumów</string>
+    <string name="stat_artist_count">Wszystkich artystów</string>
+    <string name="stat_money_total">Suma wydanych pieniędzy</string>
+    <string name="stat_album_oldest">Najstarszy album</string>
+    <string name="stat_album_newest">Najnowszy album</string>
+    <string name="stat_popular_genre">Najpopularniejszy gatunek</string>
+    <string name="stat_popular_artist">Najpopularniejszy wykonawca</string>
+    <string name="stat_song_count">Wszystkich piosenek</string>
+    <string name="stat_album_expensive">Najdroższy album</string>
+    <string name="stat_album_cheapest">Najtańszy album</string>
+    <string name="stat_one_year_count">Najwięcej albumów kupionych w jednym roku</string>
+    <string name="stat_total_length">Całkowita długość</string>
+    <string name="stat_artist_expensive">Najdroższy artysta</string>
+    <string name="stat_artist_cheapest">Najtańszy artysta</string>
+    <string name="stat_store_count">Wszystkich sklepów</string>
+    <string name="stat_store_total">Najwięcej wydano w sklepie</string>
+    <string name="stat_avg_price">Średnia cena albumu</string>
+    <string name="stat_store_economical">Najbardziej opłacalny sklep</string>
+    <string name="stat_album_recent">Najnowszy zakup</string>
+</resources>
