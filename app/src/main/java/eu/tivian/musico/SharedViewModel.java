@@ -32,7 +32,7 @@ public class SharedViewModel extends ViewModel {
     /**
      * The album list cursor.
      */
-    private MutableLiveData<AlbumCursor> cursor = new MutableLiveData<>();
+    private MutableLiveData<AlbumCursor> cursor;
 
     /**
      * An alpha value of the {@link FloatingActionButton} on the album list screen.
@@ -61,6 +61,8 @@ public class SharedViewModel extends ViewModel {
      * @return the album list cursor.
      */
     public LiveData<AlbumCursor> getCursor() {
+        if (cursor == null)
+            cursor = new MutableLiveData<>(null);
         return cursor;
     }
 

@@ -327,19 +327,19 @@ public class AlbumsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_albums, container, false);
         context = getActivity();
 
+        databaseAdapter = DatabaseAdapter.get();
         viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         viewModel.getCursor().observe(getViewLifecycleOwner(), cursor -> {
             if (cursor != null) {
                 this.cursor = cursor;
                 adapter.notifyDataSetChanged();
+            } else {
+                viewModel.setCursor(databaseAdapter.getCursor());
             }
         });
         viewModel.getLanguage().observe(getViewLifecycleOwner(), lang ->
             adapter.notifyDataSetChanged()
         );
-
-        databaseAdapter = DatabaseAdapter.get();
-        viewModel.setCursor(databaseAdapter.getCursor());
 
         RecyclerView recyclerView = view.findViewById(R.id.rv_albums);
         // should be replaced by more sophisticated way of deciding how many columns are displayed
