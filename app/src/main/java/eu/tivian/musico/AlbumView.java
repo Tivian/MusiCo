@@ -30,6 +30,8 @@ import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.bumptech.glide.Glide;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Currency;
@@ -370,8 +372,8 @@ public class AlbumView extends AppCompatActivity {
         album.purchase.date = Utilities.parseDate(date.getText().toString(), DATE_FORMAT);
 
         try {
-            album.purchase.price = Double.parseDouble(price.getText().toString());
-        } catch (NumberFormatException ex) {
+            album.purchase.price = NumberFormat.getInstance().parse(price.getText().toString()).doubleValue();
+        } catch (ParseException | NullPointerException ex) {
             album.purchase.price = 0;
         }
 
